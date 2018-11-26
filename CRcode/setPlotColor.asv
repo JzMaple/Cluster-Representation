@@ -1,0 +1,15 @@
+caoClr = 'r';
+alg1cClr = [1, 0.6732, 0];
+alg2Clr = 'b';
+rrwmClr = [.5 .5 .5];
+upperClr = [.5 .5 .5];
+alg1sndClr = 'y';
+alg4Clr = 'g';
+% alg2cClr = [0 0.4 1];
+alg3uClr = 'y';%[0 .8 .8];%µ­À¶É«
+alg3pClr = 'g';%[0.2 0.5 0];%ÇàÉ«
+nipsClr = [.5,0.2,.8];
+iccvClr = [.85 .55 0];
+% alg4Clr = [.8 0 .4];
+icmlClr = 'm';
+mpmClr = 'c';

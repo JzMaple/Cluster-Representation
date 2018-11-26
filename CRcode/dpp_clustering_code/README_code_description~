@@ -1,0 +1,33 @@
+This tar file contains the code of the DPP-cluster clustering algorithm and the baseline clustering algorithms described in the paper:
+
+
+Improved Lexical Acquisition through DPP-based Verb Clustering
+
+submitted to ACL 2013.
+  
+In addition we provide the clustering evaluation code we used in our experiments.
+The DPP sampling code used here is adjusted from the code in Alex Kulesza's web page.
+
+1. To run the DPP-cluster algorithm, run the following MATLAB functions:
+
+iterative_clustering_by_mapping (k=number_of_clusters, m=number_of_dpp_samples, number_of_iter , nus=number_of_good_samples, local_threshold_bound , iteration2_threshold )
+
+clusters = hierarhical_clusterings_cl (dpp_output_clusters, matrix=kernel_matrix, number_of_clusters=k)
+
+2. To run the AC algorithm (agglomerative clustering where DPP is replaced with a uniform sampling):
+
+replace the iterative_clustering_by_mapping with:
+
+random_iterative_clustering_by_mapping_updated (matrix,k,m,number_of_iter,nus, local_threshold_bound,iteration2_threshold)
+
+3. To run the spectral clustering baseline:
+
+spectral_clustering_meila (matrix,k,init_flag, center_indexes,gold)
+
+Where:
+
+ matrix and k are as before
+
+ init_flag is set to 1 if initializing cluster centers are  provided and center_indexes are the centers themselves. The code is quite self exploratory.
+
+4. The functions whose name is in the form of calculate*.m provide various verb clustering evaluation methods.
